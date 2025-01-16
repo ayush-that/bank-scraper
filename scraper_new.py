@@ -19,7 +19,6 @@ BANK_WEBSITES = {
     'Kotak Mahindra Bank Ltd': ['kotak.com']
 }
 
-# Download PDF from a URL
 def download_pdf(url, file_path):
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36',
@@ -36,51 +35,42 @@ def download_pdf(url, file_path):
     except Exception as e:
         print(f'Error downloading PDF from {url}: {e}')
 
-# Perform Google search and download PDF
 def search_and_download(driver, query, file_path):
     search_url = f'https://www.google.com/search?q={query}'
     driver.get(search_url)
     print(f'Searching for {query}...')
 
     try:
-        # Wait for the first PDF link to appear
         WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.XPATH, '//a[contains(@href, ".pdf")]'))
         )
-        # Find the first PDF link
         pdf_link = driver.find_element(By.XPATH, '//a[contains(@href, ".pdf")]')
         pdf_url = pdf_link.get_attribute('href')
 
-        # Download the PDF
         print(f'Found PDF at {pdf_url}')
         download_pdf(pdf_url, file_path)
-        return True  # Success
+        return True 
     except TimeoutException:
         print(f'No results found for {query}')
     except NoSuchElementException:
         print(f'No PDF link found for {query}')
     except Exception as e:
         print(f'Error searching for {query}: {e}')
-    return False  # Failure
+    return False
 
-# Main function
 def main():
-    # Ensure output directory exists
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
 
-    # Set up Chrome options
     chrome_options = Options()
-    chrome_options.add_argument('--headless')  # Run in headless mode
-    chrome_options.add_argument('--disable-blink-features=AutomationControlled')  # Avoid detection
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--disable-blink-features=AutomationControlled')
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
 
-    # Initialize the WebDriver
-    service = Service('chromedriver.exe')  # Path to chromedriver
+    service = Service('chromedriver.exe')
     driver = webdriver.Chrome(service=service, options=chrome_options)
 
-    # Process each bank
     for bank, domains in BANK_WEBSITES.items():
         bank_dir = os.path.join(OUTPUT_DIR, bank)
         if not os.path.exists(bank_dir):
@@ -103,7 +93,6 @@ def main():
             ('Auditor\'s Report', f'{bank} ("auditor\'s report" OR "independent auditor\'s report" OR "statutory auditor\'s report") {YEAR} filetype:pdf')
         ]
 
-        # Process each query
         for doc_type, query in queries:
             doc_dir = os.path.join(bank_dir, doc_type)
             if not os.path.exists(doc_dir):
@@ -112,26 +101,22 @@ def main():
             file_name = f'{bank}_{doc_type.replace(" ", "_")}_{YEAR}.pdf'
             file_path = os.path.join(doc_dir, file_name)
 
-            # Skip if the file already exists
             if os.path.exists(file_path):
                 print(f'{file_name} already exists. Skipping...')
                 continue
 
-            # Try each domain for the bank
             success = False
             for domain in domains:
                 site_query = f'{query} site:{domain}'
                 success = search_and_download(driver, site_query, file_path)
                 if success:
-                    break  # Stop if the PDF is found
+                    break
 
             if not success:
                 print(f'No results found for {bank} {YEAR} {doc_type} on any domain.')
 
-            # Add a small delay between requests to avoid being blocked
             time.sleep(5)
 
-    # Close the WebDriver
     driver.quit()
     print('Scraping completed.')
 
