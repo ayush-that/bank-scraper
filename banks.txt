@@ -1,0 +1,90 @@
+Axis Bank Ltd.
+Bandhan Bank Ltd.
+CSB Bank Limited
+City Union Bank Ltd.
+Dhanlaxmi Bank Ltd.
+Federal Bank Ltd.
+HDFC Bank Ltd
+ICICI Bank Ltd.
+IndusInd Bank Ltd
+IDFC FIRST Bank Limited
+Jammu & Kashmir Bank Ltd.
+Karnataka Bank Ltd.
+Karur Vysya Bank Ltd.
+Kotak Mahindra Bank Ltd
+Nainital bank Ltd.
+RBL Bank Ltd.
+South Indian Bank Ltd.
+Tamilnad Mercantile Bank Ltd.
+IDBI Bank Limited
+Coastal Local Area Bank Ltd
+Krishna Bhima Samruddhi LAB Ltd
+Au Small Finance Bank Ltd.
+Capital Small Finance Bank Ltd
+Equitas Small Finance Bank Ltd
+ESAF Small Finance Bank Ltd.
+Suryoday Small Finance Bank Ltd.
+Ujjivan Small Finance Bank Ltd.
+Utkarsh Small Finance Bank Ltd.
+North East Small finance Bank Ltd
+Jana Small Finance Bank Ltd
+Shivalik Small Finance Bank Ltd
+Unity Small Finance Bank Ltd
+Airtel Payments Bank Ltd
+India Post Payments Bank Ltd
+FINO Payments Bank Ltd
+Paytm Payments Bank Ltd
+Jio Payments Bank Ltd
+NSDL Payments Bank Limited
+Bank of Baroda
+Bank of India
+Bank of Maharashtra
+Canara Bank
+Central Bank of India
+Indian Bank
+Indian Overseas Bank
+Punjab & Sind Bank
+Punjab National Bank
+State Bank of India
+UCO Bank
+Union Bank of India
+Assam Gramin Vikash Bank
+Andhra Pradesh Grameena Vikas Bank
+Andhra Pragathi Grameena Bank
+Arunachal Pradesh Rural Bank
+Aryavart Bank
+Bangiya Gramin Vikash Bank
+Baroda Gujarat Gramin Bank
+Baroda Rajasthan Kshetriya Gramin Bank
+Baroda UP Bank
+Chhattisgarh Rajya Gramin Bank
+Dakshin Bihar Gramin Bank
+Ellaquai Dehati Bank
+Himachal Pradesh Gramin Bank
+Karnataka Gramin Bank
+Karnataka Vikas Gramin Bank
+Kerala Gramin Bank
+Madhya Pradesh Gramin Bank
+Madhyanchal Gramin Bank
+Maharashtra Gramin Bank
+Manipur Rural Bank
+Meghalaya Rural Bank
+Mizoram Rural Bank
+Nagaland Rural Bank
+Odisha Gramya Bank
+Paschim Banga Gramin Bank
+Prathama U.P. Gramin Bank
+Puduvai Bharathiar Grama Bank
+Punjab Gramin Bank
+Rajasthan Marudhara Gramin Bank
+Saptagiri Grameena Bank
+Sarva Haryana Gramin Bank
+Saurashtra Gramin Bank
+Tamil Nadu Grama Bank
+Telangana Grameena Bank
+Tripura Gramin Bank
+Uttar Bihar Gramin Bank
+Utkal Grameen Bank
+Uttarbanga Kshetriya Gramin Bank
+Vidharbha Konkan Gramin Bank
+Uttarakhand Gramin Bank
