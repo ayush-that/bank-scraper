@@ -86,7 +86,6 @@ def main():
         if not os.path.exists(bank_dir):
             os.makedirs(bank_dir)
 
-        # Define the queries (excluding Quarterly Report)
         queries = [
             ('Annual Report', f'{bank} ("annual report" OR "annual financial statement") {YEAR} filetype:pdf'),
             ('Balance Sheet', f'{bank} ("balance sheet" OR "statement of financial position") {YEAR} filetype:pdf'),
